@@ -1,3 +1,19 @@
+<?php
+
+if($_POST["submit"]) {
+    $recipient="kevin.s.91@gmail.com";
+    $subject="Feedback from kevinshah.GitHub.io";
+    $sender=$_POST["name"];
+    $senderEmail=$_POST["email"];
+    $message=$_POST["message"];
+
+    $mailBody="Name: $name\nEmail: $email\n\n$message";
+
+    mail($recipient, $subject, $mailBody, "From: $name <$email>");
+}
+
+?>
+
 <!DOCTYPE HTML>
 <!--
 	Hyperspace by HTML5 UP
@@ -9,10 +25,15 @@
 		<title>Hyperspace by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<link href='http://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css' />
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  <link  rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lustria' rel='stylesheet' type='text/css'>
+	
 	</head>
 	<body>
 
@@ -31,14 +52,16 @@
 			</section>
 
 		<!-- Wrapper -->
-			<div id="wrapper">
+			<div id="wrapper" >
+
 
 				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
+					<section id="intro" class="wrapper style1 fullscreen fade-up ">
 						<div class="inner">
-							<h1>Hyperspace</h1>
-							<p>Just another fine responsive site template designed by <a href="http://html5up.net">HTML5 UP</a><br />
-							and released for free under the <a href="http://html5up.net/license">Creative Commons</a>.</p>
+
+							<h1>Kevin Shah</h1>
+							<p>Just another fine responsive site template designed by HTML5 UP<br />
+							and released for free under the Creative Commons.</p>
 							<ul class="actions">
 								<li><a href="#one" class="button scrolly">Learn more</a></li>
 							</ul>
@@ -148,26 +171,25 @@
 											<label for="message">Message</label>
 											<textarea name="message" id="message" rows="5"></textarea>
 										</div>
-										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
-										</ul>
+										
+										<input type="submit" name="submit">
 									</form>
 								</section>
 								<section>
 									<ul class="contact">
 										<li>
 											<h3>Address</h3>
-											<span>12345 Somewhere Road #654<br />
-											Nashville, TN 00000-0000<br />
+											<span>1725 Bilbao Dr<br />
+											Santa Maria, CA 94353<br />
 											USA</span>
 										</li>
 										<li>
 											<h3>Email</h3>
-											<a href="#">user@untitled.tld</a>
+											<a href="#">kevin.s.91@gmail.com</a>
 										</li>
 										<li>
 											<h3>Phone</h3>
-											<span>(000) 000-0000</span>
+											<span>(862) 222-5154</span>
 										</li>
 										<li>
 											<h3>Social</h3>
